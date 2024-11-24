@@ -6,7 +6,7 @@ project:
   # description:
   # keywords: []
   # authors: []
-  github: https://github.com/myeongseok-kwon/blog
+  github: https://github.com/myeongseok-kwon/blog-ko
   # To autogenerate a Table of Contents, run "myst init --write-toc"
   exclude:
     - venv/**
