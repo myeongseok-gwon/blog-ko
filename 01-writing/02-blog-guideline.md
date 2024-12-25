@@ -43,9 +43,9 @@ README.md
 about-me.md
 01-writing/
 ├── 01-why-i-use-myst.md
-├── 02-myst-tutorial.md
+├── 02-blog-guideline.md
 02-research/
-├── 01-research-1.md
+├── 01-literature-review.md
 ├── 02-research-2.md
 ```
 
@@ -88,5 +88,13 @@ site:
 ## 5. Deployment
 [github pages 배포 가이드라인](https://mystmd.org/guide/deployment-github-pages)를 참고하여 블로그를 배포하자. 요약하면 다음과 같다.
 1. github 레포지토리를 만들고 (public), 작업한 디렉토리를 push한다.
-2. github 레포지토리에서 Settings -> Pages -> Source에서 Github Actions 배포 방법을 선택한다.
+2. [](#github-actions) 처럼 github 레포 -> Settings -> Pages에서 Github Actions 배포 방법을 선택한다.
 3. myst init --gh-pages
+
+
+:::{figure} ../images/github-actions.png
+:label: github-actions
+:width: 60%
+:align: left
+깃허브 액션 배포 방법 선택
+:::
