@@ -10,4 +10,7 @@
 
 <br/><br/>
 ## Hobbies
-음악 듣기.
+:::{figure} images/chart.png
+:label: topsters
+:align: center
+:::
