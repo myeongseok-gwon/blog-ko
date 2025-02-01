@@ -6,13 +6,14 @@ project:
   # description:
   # keywords: []
   # authors: []
-  github: https://github.com/myeongseok-kwon/blog-ko
+  github: https://github.com/myeongseok-gwon/blog-ko
   # To autogenerate a Table of Contents, run "myst init --write-toc"
   exclude:
     - venv/**
     - draft/**
     - data/**
     - images/**
+    - 03-diary/**
 site:
   template: book-theme
   options:

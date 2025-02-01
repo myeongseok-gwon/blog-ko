@@ -14,21 +14,18 @@ date: 2024-11-13
 
 ## 0. Prerequisites 
 
-1. 커맨드에 `python3 --version`를 입력하여 Python3 설치를 확인한다.
-2. 커맨드에 `git --version`를 입력하여 Git 설치를 확인한다.
-3. tex 관련 패키지를 설치하자. (https://www.tug.org/texlive/) Mac에서는 MacTeX를 설치하면 된다. (논문 포맷의 pdf 파일을 만들 때 필요하다.)
+1. Python, git 설치를 확인하자.
+2. tex 관련 패키지를 설치하자. (https://www.tug.org/texlive/) Mac에서는 MacTeX를 설치하면 된다. (논문 포맷의 pdf 파일을 만들 때 필요하다.)
 
 <br/><br/>
 
 ## 1. Install & Initialize
-작업할 디렉토리에서 다음 커맨드를 실행하여 [Python 가상환경](https://docs.python.org/ko/3/library/venv.html)을 구성하고 패키지를 설치하자. 참고로 터미널을 새로 열면 아래 커맨드 중 `source ./venv/bin/activate`를 실행해야 가상환경을 사용할 수 있다. 패키지는 한번만 설치하면 된다. 그런다음 `myst init`를 입력하면 초기 셋팅은 끝난다. `myst start`를 바로 실행할 것인지 물을텐데, 당장 시작할 필요는 없으므로 N을 입력하자.  
 
 ```bash
-python3 -m venv venv
-source ./venv/bin/activate
 pip install mystmd
 myst init
 ```
+`myst start`를 바로 실행할 것인지 물을텐데, 당장 시작할 필요는 없으므로 N을 입력하자.
 
 
 <br/><br/>
