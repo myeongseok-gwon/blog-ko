@@ -10,7 +10,7 @@
 
 <br/><br/>
 ## Hobbies
-:::{figure} images/chart.png
+:::{figure} images/topsters.png
 :label: topsters
 :align: center
 :::
