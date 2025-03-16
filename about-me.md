@@ -4,9 +4,9 @@
 <br/><br/>
 
 ## Study
-가장 최근 재밌게 또 열심히 공부한 책은 아래 2권입니다.
-1. [Python Causality Handbook](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)
-2. [딥 러닝을 이용한 자연어 처리 입문](https://wikidocs.net/book/2155)
+1. [Python Causality Handbook (완독)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)
+2. [딥 러닝을 이용한 자연어 처리 입문 (완독)](https://wikidocs.net/book/2155)
+3. [CausalML](https://causalml-book.org/)
 
 <br/><br/>
 ## Hobbies

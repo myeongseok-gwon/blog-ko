@@ -10,12 +10,21 @@ project:
   # To autogenerate a Table of Contents, run "myst init --write-toc"
   exclude:
     - venv/**
-    - draft/**
     - data/**
     - images/**
     - 03-diary/**
 site:
   template: book-theme
+  nav:
+    - title: CV
+      url: /myeongseok-CV-en
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/myeongseok-gwon-b41414312/
+    - title: GitHub
+      url: https://github.com/myeongseok-gwon
+  actions:
+    - title: ENG
+      url: https://myeongseok-gwon.github.io/blog/
   options:
     favicon: images/favicon.ico
     logo: images/site_logo.png

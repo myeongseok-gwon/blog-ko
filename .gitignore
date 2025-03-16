@@ -1,6 +1,5 @@
 .ipynb_checkpoints
 _build
 venv
-draft
+draft/*
 data
-03-diary
