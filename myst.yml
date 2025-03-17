@@ -12,7 +12,6 @@ project:
     - venv/**
     - data/**
     - images/**
-    - 03-diary/**
 site:
   template: book-theme
   nav:

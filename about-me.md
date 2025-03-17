@@ -6,7 +6,7 @@
 ## Study
 1. [Python Causality Handbook (완독)](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)
 2. [딥 러닝을 이용한 자연어 처리 입문 (완독)](https://wikidocs.net/book/2155)
-3. [CausalML](https://causalml-book.org/)
+3. [CausalML-book](https://causalml-book.org/)
 
 <br/><br/>
 ## Hobbies
