@@ -1,6 +1,24 @@
 # Doubly Robust Estimator
 
-Doubly Robust라고 부르는 이유는, 성향 점수 {math}`\hat{p}(X_i)`가 부정확하더라도 {math}`\hat{g}_1(X_i)`와 {math}`\hat{g}_0(X_i)`만 정확하면 기댓값이 곧 올바른 ATE의 추정치가 되고, 반대로 {math}`\hat{g}_1(X_i)`와 {math}`\hat{g}_0(X_i)`가 부정확하더라도 성향 점수 {math}`\hat{p}(X_i)`가 정확하면 마찬가지로 기댓값이 곧 올바른 ATE의 추정치가 되기 때문입니다.
+Doubly-Robust Estimator에 대한 정의에 앞서, 몇 가지 함수 및 추정치를 정의해보겠습니다. 종속 변수는 y, 이진 처치 변수는 D, 그리고 nuisance variables는 X로 표기합니다. 우리는 D=0인 Control Group 내부에서 모든 변수(X와 D=0)로 y를 예측하는 모델을 만들 수 있습니다. D = 1에 대해서도 마찬가지로 모델을 만들 수 있겠죠. 만약 두 그룹이 비교 가능하다면 이것만으로도 제법 괜찮은 모델일 수도 있겠네요. (물론 일부 Learner의 경우, 수많은 공변량에서 차원의 저주에 의해 D가 0이든 1이든 효과가 고려되지 않고 X에만 의존하여 예측치를 만들어 실제 효과가 있는 정책임에도 underestimate될 확률이 있을 수 있겠습니다.)
+
+\begin{align}
+g_0(x) := E[Y\mid D=0, X=x]\\
+g_1(x) := E[Y\mid D=1, X=x]\\
+g_{D_i}(x) := g_1(x) * D + g_0(x) * (1-D)\\
+\end{align}
+
+
+또 성향점수 모델 p(x)도 아래와 같이 만들 수 있습니다. q(x)의 경우 D 변수를 사용하지 않고 Y를 예측하는 모델입니다. (DML이나 Causal Forest에서 활용되는 잔차화 방식을 위해 쓰입니다.)
+
+\begin{align}
+p(x) := E[D\mid X=x] = \Pr(D=1\mid X=x)\\
+q(x) := E[Y\mid X=x]\\
+\end{align}
+
+참고로 실제로 구현할 때는 여기서 설명한 모든 추정치를 얻기 위해서 원하는 머신러닝을 골라서 사용할 수 있습니다. 단, 오버피팅 문제로 이런 방법을 쓸 때는 반드시 cross-validation을 하는 것이 하나의 규칙입니다. 구현 및 응용 방법에 대한 자세한 내용은 [링크](/CATE-inference)를 참고해주세요.
+
+Doubly Robust라고 부르는 이유는, 성향 점수 추정치 {math}`\hat{p}(X_i)`가 부정확하더라도 {math}`\hat{g}_1(X_i)`와 {math}`\hat{g}_0(X_i)`만 정확하면 기댓값이 곧 올바른 ATE의 추정치가 되고, 반대로 {math}`\hat{g}_1(X_i)`와 {math}`\hat{g}_0(X_i)`가 부정확하더라도 성향 점수 추정치 {math}`\hat{p}(X_i)`가 정확하면 마찬가지로 기댓값이 곧 올바른 ATE의 추정치가 되기 때문입니다.
 
 Doubly Robust Estimator는 다음과 같이 정의됩니다.
 
